@@ -8,6 +8,9 @@ function dispatch(action){
  return {dispatch}
 }
 
+let store = createStore();
+store.dispatch({type: '@@INIT'})
+
 
 function reducer(state = { count: 0 }, action) {
   switch (action.type) {
