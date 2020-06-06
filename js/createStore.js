@@ -12,15 +12,6 @@ function dispatch(action){
  return {dispatch, getState}
 }
 
-function render() {
-  let container = document.getElementById('container');
-  container.textContent = store.getState().count;
-};
-
-let store = createStore();
-
-store.dispatch({type: '@@INIT'})
-
 function reducer(state = { count: 0 }, action) {
   switch (action.type) {
     case 'INCREASE_COUNT':
@@ -30,6 +21,15 @@ function reducer(state = { count: 0 }, action) {
       return state;
   }
 };
+
+function render() {
+  let container = document.getElementById('container');
+  container.textContent = store.getState().count;
+};
+
+let store = createStore();
+
+store.dispatch({type: '@@INIT'})
 
 dispatch({ type: '@@INIT' })
 
