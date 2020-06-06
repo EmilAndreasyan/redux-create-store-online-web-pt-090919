@@ -31,7 +31,6 @@ function reducer(state = { count: 0 }, action) {
   }
 };
 
-
 dispatch({ type: '@@INIT' })
 
 let button = document.getElementById('button');
