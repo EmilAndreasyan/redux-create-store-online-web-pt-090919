@@ -5,7 +5,11 @@ function dispatch(action){
   state = reducer(state, action);
   render();
  }
- return {dispatch}
+ 
+ function getState(){
+   return state
+ }
+ return {dispatch, getState}
 }
 
 let store = createStore();
